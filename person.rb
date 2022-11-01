@@ -22,7 +22,7 @@ class Person < Nameable
     of_age || @parent_permission == true
   end
 
-  def correct_nname
+  def correct_name
     @name
   end
 end
