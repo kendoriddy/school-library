@@ -89,4 +89,31 @@ class App
 
         puts 'Book created successfully!'
     end
+
+    def create_rental
+       if @books.size.zero?
+           puts 'No book available'
+       elsif @people.size.zero?
+           puts 'No person available'
+       else
+           puts 'Select a book by number'
+           @books.each_with_index { |book, index| puts "#{index}) Title: #{book.title}, Author: #{book.author}" }
+           selected_book = gets.chomp.to_i
+
+           puts 'Select a person by number'
+           @people.each_with_index do
+               |person, index| puts "#{index}) Name: #{person.name} Age: #{person.age} Id: #{person.id}"
+           end
+
+           selected_person = gets.chomp.to_i
+
+           puts 'Enter date [YYYY-MM-DD]'
+           selected_date = gets.chomp.to_s
+
+           rental_item = Rental.new(selected_date, @people[selected_person], @books[selected_book])
+           @rentals.push(rental_item)
+
+           puts 'Rental successfully created!'
+       end
+    end
 end
