@@ -13,15 +13,14 @@ class App
     end
 
     def list_books
-        put 'Empty!' if @books.empty?
+        puts 'Empty!' if @books.empty?
             @books.each { |book| puts "Title: #{book.title}, Author: #{book.author}" }
         end
     end
 
     def list_people
-        put 'No person!' if @people.empty?
+        puts 'No person!' if @people.empty?
         @people.each { |person| puts "[#{person.class}], Name: #{person.name}, Age: #{person.age}, Id: #{person.id}" }
-        end
     end
 
     def create_person
@@ -124,6 +123,5 @@ class App
             |rental| if rental.person.id.to_i == id.to_i
                 puts "Date: #{rental.date}, Book: '#{rental.book.title}' by #{rental.book.author}"
             end
-        end
     end
 end
