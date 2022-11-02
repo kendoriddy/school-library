@@ -24,7 +24,7 @@ class App
         else
             'Invalid input, please try again'
         end
-        puts 'Person created successfully'
+        puts 'Person created successfully!'
     end
 
     def create_student
@@ -47,5 +47,6 @@ class App
         else
             'Invalid input, please try again'
         end
+        puts 'Student created successfully!'
     end
 end
