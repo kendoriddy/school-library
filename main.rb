@@ -43,7 +43,6 @@ class Main
   end
 end
 
-
 def main
   App.new
 end
