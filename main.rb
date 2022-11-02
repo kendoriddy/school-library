@@ -23,9 +23,9 @@ class Main
   loop do
     case home_page
     when 1
-      app.book_list
+      app.list_books
     when 2
-      app.person_list
+      app.list_people
     when 3
       app.create_person
     when 4
@@ -35,13 +35,14 @@ class Main
     when 6
       app.rental_list
     when 7
-      puts 'You made a good choice'
+      puts 'Thank you for visiting our library. Come back soonest'
       exit
     else
-      puts 'You are out of range'
+      puts 'Wrong Input Range [1..7]'
     end
   end
 end
+
 
 def main
   App.new
