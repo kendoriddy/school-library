@@ -1,8 +1,8 @@
 require_relative 'app'
 class Main
   def self.home_page
-    puts "Welcome to our School Library! #{Time.now}"
-    puts 'Select an option to proceed...'
+    puts 'Welcome to School library App!'
+    puts 'Please enter a number: '
 
     @content = {
       '1' => 'List all books',
@@ -23,9 +23,9 @@ class Main
   loop do
     case home_page
     when 1
-      app.list_books
+      app.book_list
     when 2
-      app.list_people
+      app.person_list
     when 3
       app.create_person
     when 4
@@ -35,10 +35,10 @@ class Main
     when 6
       app.rental_list
     when 7
-      puts 'Thank you for visiting our library. Come back soonest'
+      puts 'You made a good choice'
       exit
     else
-      puts 'Wrong Input Range [1..7]'
+      puts 'You are out of range'
     end
   end
 end
