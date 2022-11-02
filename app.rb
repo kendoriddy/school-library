@@ -28,13 +28,13 @@ class App
     end
 
     def create_student
-        print "Enter the student's name"
+        print "Enter the student's name: "
         name = gets.chomp
 
-        print "Enter the student's age"
+        print "Enter the student's age: "
         age = gets.chomp
 
-        print "Does the student have parent's permission? [Y/N]"
+        print "Does the student have parent's permission? [Y/N] "
         parent_permission = gets.chomp.upcase
 
         case parent_permission
@@ -48,5 +48,20 @@ class App
             'Invalid input, please try again'
         end
         puts 'Student created successfully!'
+    end
+
+    def create_teacher
+        print "Enter teacher's name: "
+        name = gets.chomp
+
+        print "Enter teacher's age: "
+        age = gets.chomp
+
+        print "Enter Teacher's specialization: "
+        specialization = gets.chomp
+
+        teacher = Teacher.new(name, age, specialization, parent_permission: true)
+        puts 'Teacher creatted successfully'
+        @people.push(teacher)
     end
 end
