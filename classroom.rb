@@ -6,4 +6,9 @@ class Classroom
         @label = label
         @student = []
     end
+
+    def add_students(student)
+        @student.push(student)
+        student.classroom = self
+    end
 end
