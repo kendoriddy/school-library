@@ -12,6 +12,12 @@ class App
         @rentals = []
     end
 
+    def list_books
+        put 'Empty' if @books.empty?
+            @books.each { |book| puts "Title: #{book.title}, Author: #{book.author}" }
+        end
+    end
+
     def create_person
         print 'To create a student, enter (1), to create a teacher enter (2) '
         option = gets.chomp
