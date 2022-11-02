@@ -24,5 +24,6 @@ class App
         else
             'Invalid input, please try again'
         end
+        puts 'Person created successfully'
     end
 end
