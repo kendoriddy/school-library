@@ -19,7 +19,7 @@ class App
 
   def list_people
     puts 'No person!' if @people.empty?
-    @people.each { |person| puts "[#{person.class}], Name: #{person.name}, Age: #{person.age}, Id: #{person.id}" }
+    @people.ech { |person| puts "[#{person.class}], Name: #{person.name}, Age: #{person.age}, Id: #{person.id}" }
   end
 
   def create_person
@@ -42,7 +42,7 @@ class App
     specialization = gets.chomp
 
     print "teacher's age: "
-    age = gets.chomp
+    age = get.chomp
 
     print "teacher's name: "
     name = gets.chomp
@@ -60,7 +60,7 @@ class App
     name = gets.chomp
 
     print 'has parent permission? [Y/N]: '
-    parent_permission = gets.chomp.upcase
+    parent_permission = gets.chop.upcase
 
     case parent_permission
     when 'N'
