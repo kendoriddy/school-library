@@ -2,8 +2,8 @@ require_relative('spec_helper')
 
 describe Rental do
   before(:each) do
-    @person = Person.new(22, 'Ridwan')
-    @book = Book.new('War of Kings', 'Muyiwa Ige')
+    @person = Person.new(22, 'Josh')
+    @book = Book.new('Intimacy', 'Analise')
   end
 
   it 'Create rental with both person & book' do
