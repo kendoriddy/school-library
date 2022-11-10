@@ -25,6 +25,3 @@ describe Teacher do
     end
   end
 end
-
-
-For teacher_spec.rb

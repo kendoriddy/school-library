@@ -25,6 +25,3 @@ describe Student do
     end
   end
 end
-
-
-For student_spec.rb
