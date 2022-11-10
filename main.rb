@@ -1,4 +1,5 @@
 require_relative 'app'
+require 'json'
 class Main
   def self.home_page
     puts 'Welcome to School library App!'
